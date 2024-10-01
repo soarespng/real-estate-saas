@@ -34,7 +34,7 @@ const PropertyList = ({ properties, numItems }) => {
                     <img
                       src={imagem}
                       alt={`Imagem ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transform transition duration-700 ease-in-out hover:scale-110"
                     />
                   </SwiperSlide>
                 ))}
@@ -49,10 +49,10 @@ const PropertyList = ({ properties, numItems }) => {
                 {property.data.endereco.bairro}, {property.data.endereco.cidade}
               </p>
               <p className="text-gray-600">
-                Tipo: {property.data.tipo} - Objetivo: {property.data.objetivo}
+                {property.data.tipo} - Objetivo: {property.data.objetivo}
               </p>
               <p className="text-lg font-bold text-blue-500 mt-2">
-                Valor: R$ {property.data.valor}
+                R$ {property.data.valor}
               </p>
             </div>
           </div>

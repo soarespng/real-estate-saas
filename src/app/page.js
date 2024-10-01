@@ -7,18 +7,18 @@ export default async function Home() {
   return (
     <div>
       <header className="bg-gray-100 text-center py-20">
-        <h1 className="text-4xl font-bold">Easy way to find a perfect property</h1>
+        <h1 className="text-4xl font-bold">Encontre a propriedade perfeita</h1>
         <p className="mt-4">
-          We provide a complete service for the sale, purchase, and rental of real estate.
+          Oferecemos um serviço completo para o anuncio, compra ou aluguel de imóveis.
         </p>
         <div className="mt-8 flex justify-center space-x-4">
-          <input className="border p-3 rounded w-1/3" placeholder="Search by location..." />
+          <input className="border p-3 rounded w-1/3" placeholder="Busque por um bairro..." />
           <button className="bg-blue-500 text-white px-6 py-3 rounded">Search</button>
         </div>
-        <div className="mt-4 flex justify-center space-x-4">
+        {/* <div className="mt-4 flex justify-center space-x-4">
           <button className="border p-3 rounded">Property Type</button>
           <button className="border p-3 rounded">Price Range</button>
-        </div>
+        </div> */}
       </header>
       
       <div className="container mx-auto my-10">
