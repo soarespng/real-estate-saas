@@ -25,12 +25,25 @@ fastify.get('/properties', async (request, reply) => {
   }
 });
 
+fastify.post('/properties', async (request, reply) => {
+  const newProperty = request.body;
+  const { data, error } = await supabase
+    .from('properties')
+    .insert({ data : newProperty })
+    .select();
+
+  if (error) {
+    console.log(error);
+    reply.code(500).send({ error: 'Error inserting property' });
+  } else {
+    reply.code(201).send({ message: 'Property added successfully', property: data });
+  }
+});
+
 const start = async () => {
     try {
       await fastify.listen({ port: 3001, host: '0.0.0.0' });
-      fastify.log.info(`Server listening on http://localhost:3001`);
     } catch (err) {
-      fastify.log.error(err);
       process.exit(1);
     }
 };
