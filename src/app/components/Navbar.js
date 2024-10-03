@@ -8,7 +8,7 @@ function Navbar() {
             <div className="text-2xl font-bold">Logo</div>
             <ul className="flex space-x-4">
               <li><Link href="/" className="text-gray-600">Home</Link></li>
-              <li><Link href="/properties" className="text-gray-600">Properties</Link></li>
+              <li><Link href="/imoveis" className="text-gray-600">Imóveis</Link></li>
             </ul>
             <button className="bg-blue-500 text-white px-4 py-2 rounded"><Link href="/admin/login">Login</Link></button>
           </div>
