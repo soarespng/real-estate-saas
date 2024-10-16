@@ -6,23 +6,27 @@ export default async function Home() {
 
   return (
     <div>
-      <header className="bg-gray-100 text-center py-20">
+      <header className="bg-gray-100 text-center py-20 bg-[url('https://zkmtielejawbbmmlqzot.supabase.co/storage/v1/object/public/banner/banner.jpeg')]">
         <h1 className="text-4xl font-bold">Forma fácil de encontrar a propriedade perfeita</h1>
-        <p className="mt-4">
-          Oferecemos um serviço completo para venda, compra e aluguel de imóveis.
-        </p>
+        <p className="mt-4">Oferecemos um serviço completo para venda, compra e aluguel de imóveis.</p>
         <div className="mt-8 flex justify-center space-x-4">
-          <input className="border p-3 rounded w-1/3" placeholder="Buscar por localização..." />
-          <button className="bg-blue-500 text-white px-6 py-3 rounded">Buscar</button>
-        </div>
-        <div className="mt-4 flex justify-center space-x-4">
-          <button className="border p-3 rounded">Tipo de Propriedade</button>
-          <button className="border p-3 rounded">Faixa de Preço</button>
+          <div className="relative w-1/3">
+            <input
+              className="border p-3 rounded w-full pl-10"
+              placeholder="Buscar por localização..."
+            />
+            <span className="absolute left-3 top-3 text-gray-500">
+              <i className="fas fa-map-marker-alt"></i>
+            </span>
+          </div>
+          <button className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded hover:opacity-80">
+            <i className="fas fa-search mr-2"></i> Buscar
+          </button>
         </div>
       </header>
-      
+
       <div className="container mx-auto my-10">
-        <h2 className="text-2xl font-bold mb-4">Propriedades Recentemente Adicionadas</h2>
+        <h2 className="text-2xl font-bold mb-4">Propriedades recentemente adicionadas</h2>
         <PropertyList properties={data.properties} numItems={6} />
       </div>
 
@@ -31,10 +35,10 @@ export default async function Home() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Encontre seu melhor Imóvel</h3>
-            <p>
-              Oferecemos um serviço mundial para venda, compra e aluguel de propriedades.
-            </p>
-            <button className="bg-blue-500 text-white px-6 py-2 mt-4 rounded">Entre em Contato</button>
+            <p>Oferecemos um serviço mundial para venda, compra e aluguel de propriedades.</p>
+            <button className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-2 mt-4 rounded hover:opacity-80">
+              Entre em Contato
+            </button>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Nossa Empresa</h3>

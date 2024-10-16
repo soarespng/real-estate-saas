@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Iniciar Fastify",
+        "program": "${workspaceFolder}/app.js", // Altere para o nome do seu arquivo
+        "runtimeArgs": ["--inspect-brk"], // Para iniciar em modo de depuração
+      }
+    ]
+  }
+  
